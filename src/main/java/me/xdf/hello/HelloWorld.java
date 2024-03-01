@@ -13,7 +13,7 @@ public class HelloWorld {
 
         Connection connection = DriverManager.getConnection(url, user, password);
         Statement statement = connection.createStatement();
-
+        
         String sql = "SELECT * FROM student;";
         ResultSet resultSet = statement.executeQuery(sql);
 
@@ -21,5 +21,7 @@ public class HelloWorld {
             System.out.print("pId=" + resultSet.getString("pId"));
             System.out.println("\tname=" + resultSet.getString("name"));
         }
+
+        System.out.println("GitHub进行了修改");
     }
 }
